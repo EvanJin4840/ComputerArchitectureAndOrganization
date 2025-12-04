@@ -55,3 +55,10 @@ It is the actual "calculator" inside the CPU that performs the mathematical work
 - Funct Field: The last 6 bits of the instruction (only for R-type instructions). This distinguishes add (100000) from sub (100010).
 - Output: A specific 4-bit signal sent to the ALU (e.g., 0010 might mean "Add", 0110 might mean "Subtract").
 - Analogy: Think of the ALU Control as the Head Waiter. The Customer (Main Control) says "I want the special (R-format). "The Head Waiter (ALU Control) looks at the specific menu item (Funct code) and yells to the Chef (ALU): "Make the Steak!" or "Make the Pasta!"3. How they work togetherHere is the flow of command:Instruction comes in. Main Control Unit looks at the Opcode. If it's lw or sw, it tells ALU Control: "We need to calculate an address (Add)."If it's beq, it tells ALU Control: "We need to compare (Subtract)."If it's R-type, it tells ALU Control: "Look at the function bits (funct) at the end of the instruction to decide."ALU Control generates the specific 4-bit signal.ALU receives the signal and performs the actual math (+, -, AND, OR).
+
+#### What is the CPI?
+
+CPI (Cycles Per Instruction)
+
+- the average number of clock cycles required to execute one instruction.
+  (명령어 하나를 실행하는 데 평균 몇 개의 클록 사이클이 필요한지를 나타내는 지표)
